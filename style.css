@@ -1,0 +1,346 @@
+@import url('fonts.css');
+
+body{
+  font-family: Noticia Text;
+  margin: 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  background-color: #EAE5E5;
+}
+/*first page style*/
+.grid-container {
+  
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 1fr 1fr 1.1fr 0.9fr;
+    grid-template-rows: 1.4fr 0.6fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header header header header header header"
+      ". content content content content ."
+      ". content content content content ."
+      ". content content content content ."
+      ". content content content content ."
+      ". content content content content ."
+      "footer footer footer footer footer footer"
+      ". . . . . .";
+  }
+  
+  .header {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 0.8fr 1.2fr 1.1fr 0.9fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". name name header-nav header-nav ."
+      ". name name header-nav header-nav .";
+    grid-area: header;
+    margin-top: 34px;
+  }
+  
+  .name { grid-area: name; }
+  .name h1 {
+    font-size: 43px;
+    color: #4D4D4D;
+  }
+  .name a {
+    text-decoration: none;
+  }
+  
+  .header-nav { grid-area: header-nav;
+    padding-top: 40px; }
+  .header-nav a {
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #4D4D4D;
+    padding-right: 27px;
+   
+
+  }
+  .header-nav a:hover{
+    color: #61D0D4;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 1fr 1fr 1.1fr 0.9fr;
+    grid-template-rows: 1.6fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". call contact follow all-reserved .";
+    grid-area: footer;
+    background-color: #E83556;
+    align-items:center;
+  }
+  
+  .call { grid-area: call;
+    
+   }
+  
+  .contact { grid-area: contact; }
+  
+  .follow { grid-area: follow; }
+  .phone, .envelope, .plus, .c {
+    background-color: #61D0D4;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: none;
+    display: inline-block;
+  margin: 0;
+  }
+ .text{
+  display: inline-block;
+  margin: 0;
+ }
+ .text-footer{
+   font-size: 14px;
+   font-weight: bold;
+   font-family: Open sans;
+ }
+  .all-reserved { grid-area: all-reserved; }
+  /*first page*/
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 1.6fr;
+    grid-template-rows: 0.9fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "my-photo my-photo title"
+      "my-photo my-photo sub-nav"
+      "my-photo my-photo about-me";
+    grid-area: content;
+  }
+  
+  .my-photo { grid-area: my-photo; }
+  .my-photo img {
+   
+    max-width: 95%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .title { grid-area: title;
+font-size: 80px;
+font-weight: bold;
+color: #4D4D4D;
+}
+  
+
+.shortpar{
+  font-size: 46px;
+font-weight: normal;
+color: #4D4D4D;
+
+}
+  
+  .sub-nav { grid-area: sub-nav; }
+  .button-sub-nav-resume{
+    border-radius: 50%;
+    background-color: #E83556;
+  border: none;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 11px;
+  cursor: pointer;
+  }
+
+  .button-sub-nav-work{
+    border-radius: 50%;
+    background-color: #61D0D4;
+  border: none;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 11px;
+  cursor: pointer;
+  }
+  .button-sub-nav-skills{
+    border-radius: 50%;
+    background-color: #D1C926;
+  border: none;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 11px;
+  cursor: pointer;
+  
+  }
+  .button-sub-nav-skills:hover {
+    background-color: rgba(99, 6, 6, 0.356)
+    
+  }
+  .button-sub-nav-work:hover{
+  background-color: rgba(99, 6, 6, 0.1)
+  }
+  .button-sub-nav-resume:hover{
+  background-color:#410913a4
+  }
+  
+  .about-me { grid-area: about-me;
+  font-family: Open Sans;
+  line-height: 20px;
+  color: #4D4D4D;
+  padding-bottom: 50px;
+  }
+
+
+  /*resume page style*/
+  .grid-container-resume {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 1fr 1fr 1.1fr 0.9fr;
+    grid-template-rows: 1.4fr 0.6fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header header header header header header"
+      ". content-resume content-resume content-resume content-resume ."
+      ". content-resume content-resume content-resume content-resume ."
+      ". content-resume content-resume content-resume content-resume ."
+      ". content-resume content-resume content-resume content-resume ."
+      ". content-resume content-resume content-resume content-resume ."
+      "footer footer footer footer footer footer"
+      ". . . . . .";
+  }
+  
+  .content-resume {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "info info knowledge"
+      "job job knowledge"
+      "job job knowledge"
+      "education education knowledge";
+    grid-area: content-resume;
+  }
+  
+  .knowledge {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "skills skills skills"
+      "it it it"
+      "language language language"
+      ". . .";
+    grid-area: knowledge;
+  }
+  
+  .skills { grid-area: skills; }
+  
+  .it { grid-area: it; }
+  
+  .language { grid-area: language; }
+  
+  .info { grid-area: info; }
+  
+  .job { grid-area: job; }
+  
+  .education { grid-area: education; }
+
+  /*projects page style*/
+  .grid-container-projects {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 1fr 1fr 1.1fr 0.9fr;
+    grid-template-rows: 1.4fr 0.6fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header header header header header header"
+      ". content-projects content-projects content-projects content-projects ."
+      ". content-projects content-projects content-projects content-projects ."
+      ". content-projects content-projects content-projects content-projects ."
+      ". content-projects content-projects content-projects content-projects ."
+      ". content-projects content-projects content-projects content-projects ."
+      "footer footer footer footer footer footer"
+      ". . . . . .";
+  }
+  
+  .content-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "title-projects title-projects title-projects title-projects"
+      "first-project-img first-project-img first-project-info first-project-info"
+      "first-project-img first-project-img first-project-info first-project-info"
+      "second-project-img second-project-img second-project-info second-project-info"
+      "second-project-img second-project-img second-project-info second-project-info"
+      "third-project-img third-project-img third-project-info third-project-info"
+      "third-project-img third-project-img third-project-info third-project-info";
+    grid-area: content-projects;
+  }
+  
+  .title-projects { grid-area: title-projects; }
+  
+  .first-project-img { grid-area: first-project-img; }
+  
+  .second-project-img { grid-area: second-project-img; }
+  
+  .third-project-img { grid-area: third-project-img; }
+  
+  .first-project-info { grid-area: first-project-info; }
+  
+  .second-project-info { grid-area: second-project-info; }
+  
+  .third-project-info { grid-area: third-project-info; }
+
+  /*contact page style*/
+  .grid-container-contact {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 1fr 1fr 1.1fr 0.9fr;
+    grid-template-rows: 1.4fr 0.6fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header header header header header header"
+      ". content-contact content-contact content-contact content-contact ."
+      ". content-contact content-contact content-contact content-contact ."
+      ". content-contact content-contact content-contact content-contact ."
+      ". content-contact content-contact content-contact content-contact ."
+      ". content-contact content-contact content-contact content-contact ."
+      "footer footer footer footer footer footer"
+      ". . . . . .";
+  }
+  
+  .content-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 1.4fr 1.4fr 0.6fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . . ."
+      "title-contact title-contact input-contact input-contact"
+      "contact-info contact-info input-contact input-contact"
+      ". . . .";
+    grid-area: content-contact;
+  }
+  
+  .title-contact { grid-area: title-contact; }
+  
+  .contact-info { grid-area: contact-info; }
+  
+  .input-contact { grid-area: input-contact; }
+  
+  
+  
